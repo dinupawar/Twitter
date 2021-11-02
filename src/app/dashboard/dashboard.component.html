@@ -1,0 +1,140 @@
+<div class="row dash">
+
+    <div class="col-md-8">
+        <div class="col-12 row yur-info">
+            <div class="col-md-2">
+                <div class="profile-image">
+                    <img src="assets/images/twitter.jpg" alt="profile image" style="height: 50px;width: 50px;border-radius: 36px;">
+                </div>
+            </div>
+            <div class="col-md-10">
+                <form [formGroup]="postTwit">
+                    
+                <div >
+                    <!-- <span class="form-control-feedback"></span> -->
+                    <input style="/*border-radius: 12px;*/
+                        /* border: 1px solid; */
+                        padding: 20px;
+                        width: 95%;
+                        border:none;
+                        /* margin-top:-70px; */
+                        /*margin-left: 20%;*/" formControlName="twit" type="text" class="form-control" placeholder="Whats Happening?">
+                        
+                        
+                    <!-- <mat-form-field>
+                        <input matInput placeholder="Whats Happening?">
+                    </mat-form-field> -->
+
+                </div>
+                
+                    <span style="color: #38a7f2;cursor:pointer">
+                        <i class="menu-icon mdi mdi-earth"></i><span> Everyone can reply</span>
+                    </span>
+                    <br>
+                    <hr>
+                    <div class="col-12 row" style="margin-bottom: 10px;">
+                        <div class="col-sm-1">
+                            <i style="color:#38a7f2;cursor:pointer" data-toggle="tooltip" title="Media" class="menu-icon mdi mdi-image"></i>
+                        </div>
+                        <div class="col-sm-1">
+                            <i style="color:#38a7f2;cursor:pointer" data-toggle="tooltip" title="GIF" class="menu-icon mdi mdi-folder-move"></i>
+                        </div>
+                        <div class="col-sm-1">
+                            <i style="color:#38a7f2;cursor:pointer" data-toggle="tooltip" title="Poll" class="menu-icon mdi mdi-chart-timeline"></i>
+                        </div>
+                        <div class="col-sm-1">
+                            <i style="color:#38a7f2;cursor:pointer" data-toggle="tooltip" title="Emoji" class="menu-icon mdi mdi-emoticon"></i>
+                        </div>
+                        <div class="col-sm-1">
+                            <i style="color:#38a7f2;cursor:pointer" data-toggle="tooltip" title="Schedule" class="menu-icon mdi mdi-timetable"></i>
+                        </div>
+                        <div class="col-sm-7" style="text-align: right;">
+                            <button type="button" class="btn btn-primary" (click)="insert(postTwit.value)">Tweet</button>
+                        </div>
+                    </div>
+                </form>
+                    <!-- sdyfgousdybgfpiagfad -->
+
+            </div>
+        </div>
+        
+        <div class="col-12 row twit-info" *ngFor="let d of data">
+            <div class="col-md-2">
+                <div class="profile-image">
+                    <img src="assets/images/faces/face1.jpg" alt="profile image" style="height: 50px;width: 50px;border-radius: 36px;">
+                </div>
+            </div>
+            <div class="col-md-8">
+
+                <span style="cursor:pointer"><b> {{d.twit}} </b></span><br>
+                <span style="cursor:pointer"><b>{{d.twit}}</b> {{d.twit}} . 2h </span><br>
+                <span class="description"> {{d.twit}} </span>
+                <!-- <div *ngIf="d.desc_image != null">
+                    <img [src]="d.desc_image" class="desc-img" alt="profile image">
+                </div> -->
+                <hr>
+                    <div class="col-12 row" style="margin-bottom: 10px;">
+                        <div class="col-sm-3">
+                            <i style="cursor:pointer" data-toggle="tooltip" title="Comment" class="menu-icon mdi mdi-comment-outline">124 </i>
+                        </div>
+                        <div class="col-sm-3">
+                            <i style="cursor:pointer" data-toggle="tooltip" title="Retweet" class="menu-icon mdi mdi-source-fork">224</i>
+                        </div>
+                        <div class="col-sm-3">
+                            <i style="cursor:pointer" data-toggle="tooltip" title="Like" class="menu-icon mdi mdi-heart-outline">214</i>
+                        </div>
+                        <div class="col-sm-3">
+                            <i style="cursor:pointer" data-toggle="tooltip" title="Share" class="menu-icon mdi mdi-upload"></i>
+                        </div>
+                    </div>
+                    <!-- sdyfgousdybgfpiagfad -->
+
+            </div>
+            <div class="col-sm-2">
+                <i style="cursor:pointer" data-toggle="tooltip" title="More" class="menu-icon mdi mdi-more"></i>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="col-md-4">
+        
+        <div class="form-group has-search">
+            <span class="form-control-feedback"></span>
+            <input style="border-radius: 12px;
+                border: 1px solid;
+                padding: 20px;
+                width: 80%;
+                /* margin-top:-70px; */
+                /*margin-left: 20%;*/" type="text" class="form-control" placeholder="Search" [(ngModel)]="searchedKeyword">
+          </div>
+      <div class="row">
+        <div>
+          <h3>
+            what Heppings
+          </h3>
+        </div>
+        
+     </div>
+      <div class="row happen-info">
+          <br>
+        <div class="col-12 row " *ngFor="let d of data1 | filter:searchedKeyword">
+            <div class="col-md-10">
+
+                <!-- <span style="cursor:pointer"><b> {{d.name}} </b></span><br> -->
+                <span style="cursor:pointer"><b>{{d.name}}</b> {{d.twit_id}} . 2h </span><br>
+                <span class="description"> {{d.description}} </span>
+                
+            </div>
+            <div class="col-sm-2">
+                <div class="profile-image">
+                    <img [src]="d.image" alt="profile image" style="height: 50px;width: 50px;border-radius: 36px;">
+                </div><br>
+                <hr>
+            </div>
+        </div>
+      </div>
+
+    </div>
+
+</div>
