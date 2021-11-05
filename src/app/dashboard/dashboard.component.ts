@@ -17,6 +17,7 @@ export class DashboardComponent implements OnInit {
   postTwit  : FormGroup;
   data=[];
   data1:any[];
+  tweet = "";
   searchedKeyword;
 
   constructor(
@@ -44,6 +45,11 @@ export class DashboardComponent implements OnInit {
     for (var x in res){
       res.hasOwnProperty(x) && this.data.push(res);
     }
+    
+    this.data = this.data.reverse(); 
+    console.log("Reversed array is : " + this.data );
+
+    this.postTwit.reset();
     
     console.log("dasasasas",res);
   }

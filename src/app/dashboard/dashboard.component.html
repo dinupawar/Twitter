@@ -18,8 +18,12 @@
                         width: 95%;
                         border:none;
                         /* margin-top:-70px; */
-                        /*margin-left: 20%;*/" formControlName="twit" type="text" class="form-control" placeholder="Whats Happening?">
-                        
+                        /*margin-left: 20%;*/"
+                        required formControlName="twit" type="text" class="form-control" placeholder="Whats Happening?">
+                        <!-- <br>
+                        <span *ngIf="postTwit.errors?.required">
+                            This field is required
+                          </span> -->
                         
                     <!-- <mat-form-field>
                         <input matInput placeholder="Whats Happening?">
@@ -49,7 +53,7 @@
                             <i style="color:#38a7f2;cursor:pointer" data-toggle="tooltip" title="Schedule" class="menu-icon mdi mdi-timetable"></i>
                         </div>
                         <div class="col-sm-7" style="text-align: right;">
-                            <button type="button" class="btn btn-primary" (click)="insert(postTwit.value)">Tweet</button>
+                            <button type="button" class="btn btn-primary" [disabled]="postTwit.invalid" (click)="insert(postTwit.value)">Tweet</button>
                         </div>
                     </div>
                 </form>
