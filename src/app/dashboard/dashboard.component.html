@@ -1,13 +1,13 @@
 <div class="row dash">
 
     <div class="col-md-8">
-        <div class="col-12 row yur-info">
-            <div class="col-md-2">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 row yur-info">
+            <div class="col-md-2 col-sm-2 col-lg-2 col-xl-2">
                 <div class="profile-image">
                     <img src="assets/images/twitter.jpg" alt="profile image" style="height: 50px;width: 50px;border-radius: 36px;">
                 </div>
             </div>
-            <div class="col-md-10">
+            <div class="col-md-10  col-sm-10 col-lg-10 col-xl-10">
                 <form [formGroup]="postTwit">
                     
                 <div >
@@ -36,23 +36,23 @@
                     </span>
                     <br>
                     <hr>
-                    <div class="col-12 row" style="margin-bottom: 10px;">
-                        <div class="col-sm-1">
+                    <div class="col-12 col-md-12 col-sm-12 col-lg-12 col-xl-12 row" style="margin-bottom: 10px;">
+                        <div class="col-sm-1 col-md-1 col-lg-1 col-xl-1">
                             <i style="color:#38a7f2;cursor:pointer" data-toggle="tooltip" title="Media" class="menu-icon mdi mdi-image"></i>
                         </div>
-                        <div class="col-sm-1">
+                        <div class="col-sm-1 col-md-1 col-lg-1 col-xl-1">
                             <i style="color:#38a7f2;cursor:pointer" data-toggle="tooltip" title="GIF" class="menu-icon mdi mdi-folder-move"></i>
                         </div>
-                        <div class="col-sm-1">
+                        <div class="col-sm-1 col-md-1 col-lg-1 col-xl-1">
                             <i style="color:#38a7f2;cursor:pointer" data-toggle="tooltip" title="Poll" class="menu-icon mdi mdi-chart-timeline"></i>
                         </div>
-                        <div class="col-sm-1">
+                        <div class="col-sm-1 col-md-1 col-lg-1 col-xl-1">
                             <i style="color:#38a7f2;cursor:pointer" data-toggle="tooltip" title="Emoji" class="menu-icon mdi mdi-emoticon"></i>
                         </div>
-                        <div class="col-sm-1">
+                        <div class="col-sm-1 col-md-1 col-lg-1 col-xl-1">
                             <i style="color:#38a7f2;cursor:pointer" data-toggle="tooltip" title="Schedule" class="menu-icon mdi mdi-timetable"></i>
                         </div>
-                        <div class="col-sm-7" style="text-align: right;">
+                        <div class="col-sm-7 col-md-7 col-lg-7 col-xl-7" style="text-align: right;">
                             <button type="button" class="btn btn-primary" [disabled]="postTwit.invalid" (click)="insert(postTwit.value)">Tweet</button>
                         </div>
                     </div>
@@ -62,13 +62,13 @@
             </div>
         </div>
         
-        <div class="col-12 row twit-info" *ngFor="let d of data">
-            <div class="col-md-2">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 row twit-info" *ngFor="let d of data">
+            <div class="col-md-2 col-sm-2 col-lg-2 col-xl-2">
                 <div class="profile-image">
                     <img src="assets/images/faces/face1.jpg" alt="profile image" style="height: 50px;width: 50px;border-radius: 36px;">
                 </div>
             </div>
-            <div class="col-md-8">
+            <div class="col-md-8 col-sm-8 col-lg-8 col-xl-8">
 
                 <span style="cursor:pointer"><b> {{d.twit}} </b></span><br>
                 <span style="cursor:pointer"><b>{{d.twit}}</b> {{d.twit}} . 2h </span><br>
@@ -77,31 +77,31 @@
                     <img [src]="d.desc_image" class="desc-img" alt="profile image">
                 </div> -->
                 <hr>
-                    <div class="col-12 row" style="margin-bottom: 10px;">
-                        <div class="col-sm-3">
+                    <div class="col-12 col-md-12 col-sm-12 col-lg-12 col-xl-12 row" style="margin-bottom: 10px;">
+                        <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
                             <i style="cursor:pointer" data-toggle="tooltip" title="Comment" class="menu-icon mdi mdi-comment-outline">124 </i>
                         </div>
-                        <div class="col-sm-3">
+                        <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
                             <i style="cursor:pointer" data-toggle="tooltip" title="Retweet" class="menu-icon mdi mdi-source-fork">224</i>
                         </div>
-                        <div class="col-sm-3">
+                        <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
                             <i style="cursor:pointer" data-toggle="tooltip" title="Like" class="menu-icon mdi mdi-heart-outline">214</i>
                         </div>
-                        <div class="col-sm-3">
+                        <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
                             <i style="cursor:pointer" data-toggle="tooltip" title="Share" class="menu-icon mdi mdi-upload"></i>
                         </div>
                     </div>
                     <!-- sdyfgousdybgfpiagfad -->
 
             </div>
-            <div class="col-sm-2">
+            <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2">
                 <i style="cursor:pointer" data-toggle="tooltip" title="More" class="menu-icon mdi mdi-more"></i>
             </div>
         </div>
 
 
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4 col-sm-4 col-lg-4 col-xl-4">
         
         <div class="form-group has-search">
             <span class="form-control-feedback"></span>
@@ -122,15 +122,15 @@
      </div>
       <div class="row happen-info">
           <br>
-        <div class="col-12 row " *ngFor="let d of data1 | filter:searchedKeyword">
-            <div class="col-md-10">
+        <div class="col-12 col-md-12 col-sm-12 col-lg-12 col-xl-12 row " *ngFor="let d of data1 | filter:searchedKeyword">
+            <div class="col-md-10 col-md-10 col-sm-10 col-lg-10 col-xl-10">
 
                 <!-- <span style="cursor:pointer"><b> {{d.name}} </b></span><br> -->
                 <span style="cursor:pointer"><b>{{d.name}}</b> {{d.twit_id}} . 2h </span><br>
                 <span class="description"> {{d.description}} </span>
                 
             </div>
-            <div class="col-sm-2">
+            <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2">
                 <div class="profile-image">
                     <img [src]="d.image" alt="profile image" style="height: 50px;width: 50px;border-radius: 36px;">
                 </div><br>

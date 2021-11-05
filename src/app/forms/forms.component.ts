@@ -29,7 +29,8 @@ export class FormsComponent implements OnInit {
 
   constructor() { }
 
-  // search = (text$: Observable<string>) =>
+  search = []; 
+  // (text$: Observable<string>) =>
   //   text$
   //     .debounceTime(200)
   //     .distinctUntilChanged()
@@ -40,7 +41,8 @@ export class FormsComponent implements OnInit {
   focus$ = new Subject<string>();
   click$ = new Subject<string>();
 
-  // focusSearch = (text$: Observable<string>) =>
+  focusSearch = [];
+  // (text$: Observable<string>) =>
   //   text$
   //     .debounceTime(200).distinctUntilChanged()
   //     .merge(this.focus$)
